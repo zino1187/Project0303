@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Project0303</display-name>
+	<!-- WEB-INF에 있는 web.xml 은 클라이언트의 요청시
+	무조건 거쳐서 가는 파일이다..따라서 서블릿과 같은 클래스는
+	클라이언트가 다운로드 받을수 잇는 html 과 같은 컨텐츠가 아니기에
+	서버에서 실행되도록 매핑을 걸어야 한다!!!
+	 -->
+	 <servlet>
+	 	<servlet-name>testServlet</servlet-name>
+	 	<servlet-class>test.MyServlet</servlet-class>
+	 </servlet>
+	 <servlet-mapping>
+	 	<servlet-name>testServlet</servlet-name>
+	 	<url-pattern>/test</url-pattern>
+	 </servlet-mapping>
+	 
+	 <servlet>
+	 	<servlet-name>adviceServlet</servlet-name>
+	 	<servlet-class>movie.MovieAdvisor</servlet-class>
+	 </servlet>
+	 <servlet-mapping>
+	 	<servlet-name>adviceServlet</servlet-name>
+	 	<url-pattern>/movie</url-pattern>
+	 </servlet-mapping>
+	 
+</web-app>
+
+
+
+
+
+
