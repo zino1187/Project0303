@@ -18,6 +18,11 @@
 	 <servlet>
 	 	<servlet-name>adviceServlet</servlet-name>
 	 	<servlet-class>movie.MovieAdvisor</servlet-class>
+	 	<!-- 서블릿이 초기화될때, 넘겨줄 값을 아래에서 정의할 수 있다!! -->
+	 	<init-param>
+			<param-name>data</param-name>
+			<param-value>바나나</param-value>	 		
+	 	</init-param>
 	 </servlet>
 	 <servlet-mapping>
 	 	<servlet-name>adviceServlet</servlet-name>
